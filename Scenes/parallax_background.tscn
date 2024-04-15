@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://n4bdxiq41y27"]
+
+[ext_resource type="Texture2D" uid="uid://cpmtik4q2tmul" path="res://assets/background/Stars.png" id="1_lnq3t"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Stars2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(192, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars3" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(320, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars4" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(448, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars5" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars6" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(704, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(64, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars7" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(832, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars8" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(960, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars9" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(1088, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars10" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(1216, 64)
+texture = ExtResource("1_lnq3t")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(1344, 64)
+texture = ExtResource("1_lnq3t")

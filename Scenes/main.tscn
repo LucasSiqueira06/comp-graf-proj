@@ -1,0 +1,137 @@
+[gd_scene load_steps=20 format=3 uid="uid://c8l27gwism444"]
+
+[ext_resource type="PackedScene" uid="uid://n4bdxiq41y27" path="res://Scenes/parallax_background.tscn" id="1_golos"]
+[ext_resource type="Texture2D" uid="uid://mpnkhux3fivr" path="res://assets/moon-platform/Ground_Rocks.png" id="2_3y5to"]
+[ext_resource type="Texture2D" uid="uid://4ps4ag4q21xs" path="res://assets/moon-platform/Ground_Slope.png" id="3_u6ptj"]
+[ext_resource type="Texture2D" uid="uid://gifos1aalrvf" path="res://assets/moon-platform/Platform_Left.png" id="4_lsul6"]
+[ext_resource type="Texture2D" uid="uid://c3j5r202djdqh" path="res://assets/moon-platform/Platform_LUpper.png" id="5_dlhhw"]
+[ext_resource type="Texture2D" uid="uid://dgwl5aq01uy4v" path="res://assets/moon-platform/Platform_Middle.png" id="6_kw2v6"]
+[ext_resource type="Texture2D" uid="uid://i2vsbalf2wdk" path="res://assets/moon-platform/Platform_MUpper.png" id="7_u5ngr"]
+[ext_resource type="Texture2D" uid="uid://coevt3ev07cmf" path="res://assets/moon-platform/Platform_Right.png" id="8_rrm8f"]
+[ext_resource type="Texture2D" uid="uid://dlsrcm1rrjnfo" path="res://assets/moon-platform/Platform_RUpper.png" id="9_6ul2b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfvec"]
+size = Vector2(1238, 170)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0vneh"]
+texture = ExtResource("2_3y5to")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pt2ge"]
+texture = ExtResource("3_u6ptj")
+3:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mnkhi"]
+texture = ExtResource("4_lsul6")
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qp8fo"]
+texture = ExtResource("5_dlhhw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7vov7"]
+texture = ExtResource("6_kw2v6")
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yy1l2"]
+texture = ExtResource("7_u5ngr")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_76yeg"]
+texture = ExtResource("8_rrm8f")
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pnfgw"]
+texture = ExtResource("9_6ul2b")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qcnpx"]
+sources/0 = SubResource("TileSetAtlasSource_0vneh")
+sources/1 = SubResource("TileSetAtlasSource_pt2ge")
+sources/2 = SubResource("TileSetAtlasSource_mnkhi")
+sources/3 = SubResource("TileSetAtlasSource_qp8fo")
+sources/4 = SubResource("TileSetAtlasSource_7vov7")
+sources/5 = SubResource("TileSetAtlasSource_yy1l2")
+sources/6 = SubResource("TileSetAtlasSource_76yeg")
+sources/7 = SubResource("TileSetAtlasSource_pnfgw")
+
+[node name="Main" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(619, 213)
+shape = SubResource("RectangleShape2D_yfvec")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_golos")]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_qcnpx")
+format = 2
+layer_0/tile_data = PackedInt32Array(524288, 0, 0, 524289, 65536, 0, 524290, 131072, 0, 524291, 196608, 0, 524292, 0, 0, 524293, 65536, 0, 524294, 131072, 0, 524295, 196608, 0, 524296, 0, 0, 524297, 65536, 0, 524298, 131072, 0, 524299, 196608, 0, 524300, 0, 0, 524301, 65536, 0, 524302, 131072, 0, 524303, 0, 0, 524304, 65536, 0, 524305, 131072, 0, 524306, 196608, 0, 524307, 0, 0, 524308, 65536, 0, 524309, 131072, 0, 524310, 196608, 0, 524311, 0, 0, 524312, 65536, 0, 524313, 131072, 0, 524314, 196608, 0, 524315, 0, 0, 524316, 65536, 0, 524317, 131072, 0, 524318, 196608, 0, 524319, 0, 0, 524320, 65536, 0, 524321, 131072, 0, 524322, 196608, 0, 524323, 0, 0, 524324, 65536, 0, 524325, 131072, 0, 524326, 196608, 0, 524327, 0, 0, 524328, 65536, 0, 524329, 131072, 0, 524330, 196608, 0, 524331, 0, 0, 524332, 65536, 0, 524333, 131072, 0, 524334, 196608, 0, 524335, 0, 0, 524336, 65536, 0, 524337, 131072, 0, 524338, 196608, 0, 524339, 0, 0, 524340, 65536, 0, 524341, 131072, 0, 524342, 196608, 0, 524343, 0, 0, 524344, 65536, 0, 524345, 131072, 0)
