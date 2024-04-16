@@ -32,6 +32,7 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_key_pressed(KEY_SPACE):
 		velocity.y = -jumpForce * (currentGravity / 500.0)
 		$AnimatedSprite2D.play("Jump")
+		$AudioStreamPlayer.play()
 	elif velocity.y < 0 and $AnimatedSprite2D.animation != "Jump":
 		$AnimatedSprite2D.play("Jump")
 	

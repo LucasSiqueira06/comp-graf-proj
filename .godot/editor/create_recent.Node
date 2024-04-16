@@ -1,6 +1,8 @@
+AudioStreamPlayer
+AudioStreamPlayer2D
+Camera2D
 CollisionShape2D
 StaticBody2D
-AudioStreamPlayer
 TileMap
 ParallaxLayer
 ParallaxBackground
