@@ -184,6 +184,7 @@ layer_0/tile_data = PackedInt32Array(524288, 0, 0, 524289, 0, 0, 524290, 65536, 
 
 [node name="Player" parent="." instance=ExtResource("12_n6qqe")]
 position = Vector2(16, 96)
+currentGravity = 500.0
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 

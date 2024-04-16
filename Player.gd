@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
+@export var currentGravity : float = 800.0
 var moveSpeed : float = 100.0
 var jumpForce : float = 200.0
-var currentGravity : float = 500.0
 var facingLeft : bool = false
 
 func _physics_process(delta):
@@ -30,7 +30,7 @@ func _physics_process(delta):
 			$AnimatedSprite2D.play("Idle")
 	
 	if is_on_floor() and Input.is_key_pressed(KEY_SPACE):
-		velocity.y = -jumpForce
+		velocity.y = -jumpForce * (currentGravity / 500.0)
 		$AnimatedSprite2D.play("Jump")
 	elif velocity.y < 0 and $AnimatedSprite2D.animation != "Jump":
 		$AnimatedSprite2D.play("Jump")
