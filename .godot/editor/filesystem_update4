@@ -1,4 +1,4 @@
 res://default_env.tres
 res://Player.tscn
-res://Player.gd
 res://Scenes/main.tscn
+res://bg_music.tscn
