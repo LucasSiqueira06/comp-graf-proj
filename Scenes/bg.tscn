@@ -10,6 +10,46 @@
 position = Vector2(64, 64)
 texture = ExtResource("1_72qlf")
 
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars"]
+position = Vector2(0, 128)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars/Stars"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars/Stars/Stars"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars/Stars/Stars/Stars"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars/Stars/Stars/Stars/Stars"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars/Stars/Stars/Stars/Stars/Stars"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars/Stars/Stars/Stars/Stars/Stars/Stars"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars/Stars/Stars/Stars/Stars/Stars/Stars/Stars"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars/Stars/Stars/Stars/Stars/Stars/Stars/Stars/Stars"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars" type="Sprite2D" parent="ParallaxLayer/Stars/Stars/Stars/Stars/Stars/Stars/Stars/Stars/Stars/Stars"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
 [node name="Stars2" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(192, 64)
 texture = ExtResource("1_72qlf")
@@ -48,6 +88,46 @@ texture = ExtResource("1_72qlf")
 
 [node name="Stars11" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(64, -64)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11"]
+position = Vector2(0, -128)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11/Stars11"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11/Stars11/Stars11"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11/Stars11/Stars11/Stars11"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11/Stars11/Stars11/Stars11/Stars11"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11"]
+position = Vector2(128, 0)
+texture = ExtResource("1_72qlf")
+
+[node name="Stars11" type="Sprite2D" parent="ParallaxLayer/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11/Stars11"]
+position = Vector2(128, 0)
 texture = ExtResource("1_72qlf")
 
 [node name="Stars12" type="Sprite2D" parent="ParallaxLayer"]

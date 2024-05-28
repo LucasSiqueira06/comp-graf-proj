@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://kfw54g44ur2r"]
+
+[ext_resource type="Texture2D" uid="uid://dd7e14k3tixin" path="res://assets/planets/pixel-sun.png" id="1_gmg87"]
+[ext_resource type="PackedScene" uid="uid://3u7l6jyykbw8" path="res://Scenes/bg.tscn" id="2_lk3ll"]
+[ext_resource type="Texture2D" uid="uid://ri8fs7lx1ly" path="res://assets/planets/earth.png" id="3_auvah"]
+[ext_resource type="Texture2D" uid="uid://dbp5ovgsa6ir4" path="res://assets/planets/moon.png" id="4_6gpii"]
+[ext_resource type="Script" path="res://Scenes/MoonButton.gd" id="5_huqb8"]
+
+[node name="Hub" type="Node2D"]
+
+[node name="Sun" type="Sprite2D" parent="."]
+position = Vector2(-72, 5)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("1_gmg87")
+
+[node name="ParallaxBackground2" parent="." instance=ExtResource("2_lk3ll")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(268, 6)
+zoom = Vector2(2.145, 2.145)
+
+[node name="Earth" type="Sprite2D" parent="."]
+position = Vector2(261, 12)
+scale = Vector2(0.045, 0.045)
+texture = ExtResource("3_auvah")
+
+[node name="MoonButton" type="TextureButton" parent="."]
+offset_left = 297.0
+offset_top = -20.0
+offset_right = 425.0
+offset_bottom = 108.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("4_6gpii")
+script = ExtResource("5_huqb8")
