@@ -3,3 +3,6 @@ res://Player.tscn
 res://Scenes/main.tscn
 res://bg_music.tscn
 res://Scenes/bg.tscn
+res://main_menu.tscn
+res://StarParticles.gd
+res://StartGameButton.gd

@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://skbexkxtisx2"]
+
+[ext_resource type="Texture2D" uid="uid://dotrofd5dh7cu" path="res://assets/background/black-background.png" id="1_4iyum"]
+[ext_resource type="Texture2D" uid="uid://dnythwnv58bxl" path="res://assets/background/star-small.png" id="1_xdb1y"]
+[ext_resource type="Script" path="res://StarParticles.gd" id="2_pts1x"]
+[ext_resource type="Script" path="res://StartGameButton.gd" id="4_5rfqq"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_c48yn"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.1
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Black-background" type="Sprite2D" parent="."]
+position = Vector2(557, 318)
+texture = ExtResource("1_4iyum")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(554, 318)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_c48yn")
+texture = ExtResource("1_xdb1y")
+lifetime = 10.0
+script = ExtResource("2_pts1x")
+
+[node name="MenuUI" type="CanvasLayer" parent="."]
+
+[node name="StartGame" type="MenuButton" parent="MenuUI"]
+anchors_preset = -1
+anchor_right = 0.118
+anchor_bottom = 0.194
+offset_left = 346.0
+offset_top = 229.0
+offset_right = 631.064
+offset_bottom = 311.288
+text = "Start Game"
+script = ExtResource("4_5rfqq")
