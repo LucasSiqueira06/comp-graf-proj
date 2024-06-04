@@ -1,11 +1,5 @@
 res://default_env.tres
 res://Player.tscn
 res://Scenes/main.tscn
-res://bg_music.tscn
-res://Scenes/bg.tscn
-res://main_menu.tscn
 res://Scenes/Hub.tscn
-res://StartGameButton.gd
-res://Scenes/main_menu.tscn
-res://Scenes/moon.gd
 res://Scenes/MoonButton.gd

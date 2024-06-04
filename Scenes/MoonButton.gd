@@ -3,7 +3,7 @@ extends TextureButton
 var moon := "res://Scenes/main.tscn"
 
 # The scale factor to apply when the mouse is over the button
-@export var hover_scale: Vector2 = Vector2(1.01, 1.01)
+@export var hover_scale: Vector2 = Vector2(0.25, 0.25)
 # The original scale of the button (to revert back when the mouse leaves)
 var original_scale: Vector2
 
