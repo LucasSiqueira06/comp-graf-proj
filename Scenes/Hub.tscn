@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ri8fs7lx1ly" path="res://assets/planets/earth.png" id="3_auvah"]
 [ext_resource type="Texture2D" uid="uid://dbp5ovgsa6ir4" path="res://assets/planets/moon.png" id="4_6gpii"]
 [ext_resource type="Script" path="res://Scenes/MoonButton.gd" id="5_huqb8"]
-[ext_resource type="Texture2D" path="res://assets/planets/mars.png" id="6_iawxv"]
+[ext_resource type="Texture2D" uid="uid://k0n4lndyy4f5" path="res://assets/planets/mars.png" id="6_iawxv"]
 [ext_resource type="Script" path="res://Scenes/MarsButton.gd" id="7_k8h6k"]
 [ext_resource type="Texture2D" uid="uid://chmg8oigypd2" path="res://assets/planets/venus.png" id="8_r4m8n"]
 [ext_resource type="Texture2D" uid="uid://cuqmf6ems7jst" path="res://assets/planets/mercury.png" id="9_dt71f"]

@@ -1,6 +1,6 @@
 extends TextureButton
 
-#var mars := "res://Scenes/main.tscn"
+var mars := "res://Scenes/Mars.tscn"
 
 # The scale factor to apply when the mouse is over the button
 @export var hover_scale: Vector2 = Vector2(0.5, 0.5)
@@ -24,4 +24,4 @@ func _on_mouse_exited():
 
 func _pressed():
 	var tree = get_tree()
-	#tree.change_scene_to_file(moon)
+	tree.change_scene_to_file(mars)

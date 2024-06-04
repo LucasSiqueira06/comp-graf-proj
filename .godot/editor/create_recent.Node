@@ -1,3 +1,5 @@
+CollisionShape2D
+TileMap
 TextureButton
 Sprite2D
 Camera2D
@@ -10,5 +12,3 @@ CPUParticles2D
 RichTextLabel
 Control
 Node
-CollisionShape2D
-Area2D
