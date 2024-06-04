@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://kfw54g44ur2r"]
+[gd_scene load_steps=8 format=3 uid="uid://kfw54g44ur2r"]
 
 [ext_resource type="Texture2D" uid="uid://dd7e14k3tixin" path="res://assets/planets/pixel-sun.png" id="1_gmg87"]
 [ext_resource type="PackedScene" uid="uid://3u7l6jyykbw8" path="res://Scenes/bg.tscn" id="2_lk3ll"]
 [ext_resource type="Texture2D" uid="uid://ri8fs7lx1ly" path="res://assets/planets/earth.png" id="3_auvah"]
 [ext_resource type="Texture2D" uid="uid://dbp5ovgsa6ir4" path="res://assets/planets/moon.png" id="4_6gpii"]
 [ext_resource type="Script" path="res://Scenes/MoonButton.gd" id="5_huqb8"]
+[ext_resource type="Texture2D" uid="uid://k0n4lndyy4f5" path="res://assets/planets/mars.png" id="6_iawxv"]
+[ext_resource type="Script" path="res://Scenes/MarsButton.gd" id="7_k8h6k"]
 
 [node name="Hub" type="Node2D"]
 
@@ -32,3 +34,12 @@ offset_bottom = 108.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("4_6gpii")
 script = ExtResource("5_huqb8")
+
+[node name="MarsButton" type="TextureButton" parent="."]
+offset_left = 338.0
+offset_top = -16.0
+offset_right = 467.0
+offset_bottom = 113.0
+scale = Vector2(0.43, 0.43)
+texture_normal = ExtResource("6_iawxv")
+script = ExtResource("7_k8h6k")
