@@ -1,7 +1,11 @@
+Label
+MarginContainer
+NinePatchRect
+Sprite2D
 CollisionShape2D
+Area2D
 TileMap
 TextureButton
-Sprite2D
 Camera2D
 ParallaxBackground
 Button
@@ -9,6 +13,3 @@ MenuButton
 CanvasLayer
 GPUParticles2D
 CPUParticles2D
-RichTextLabel
-Control
-Node

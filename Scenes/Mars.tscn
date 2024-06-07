@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0ivtl10etao2"]
+[gd_scene load_steps=8 format=3 uid="uid://c0ivtl10etao2"]
 
 [ext_resource type="PackedScene" uid="uid://3u7l6jyykbw8" path="res://Scenes/bg.tscn" id="1_ysagk"]
 [ext_resource type="PackedScene" uid="uid://cx5ig1n7p5qwb" path="res://Player.tscn" id="2_0ejbj"]
 [ext_resource type="Texture2D" uid="uid://caj2ys0cpbypw" path="res://assets/mars-platform/mars-assets-reduced-removebg-preview.png" id="3_h0n3h"]
+[ext_resource type="PackedScene" uid="uid://b8qlachgiva7a" path="res://NPCs/Spaceship.tscn" id="4_33cig"]
+[ext_resource type="Script" path="res://NPCs/Spaceship.gd" id="5_7pobe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x5r7s"]
 texture = ExtResource("3_h0n3h")
@@ -1229,12 +1231,17 @@ sources/0 = SubResource("TileSetAtlasSource_x5r7s")
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_ysagk")]
 
 [node name="Player" parent="." instance=ExtResource("2_0ejbj")]
-position = Vector2(16, 16)
+position = Vector2(144, 16)
+currentGravity = 100.0
 rotationSpeed = 0
 
 [node name="TileMap" type="TileMap" parent="."]
-z_index = -1
 position = Vector2(-8, -8)
 tile_set = SubResource("TileSet_pjvs3")
 format = 2
 layer_0/tile_data = PackedInt32Array(131072, 0, 2, 196608, 0, 3, 262144, 0, 4, 327680, 0, 5, 393216, 0, 6, 131073, 65536, 2, 196609, 65536, 3, 262145, 65536, 4, 327681, 65536, 5, 393217, 65536, 6, 131074, 131072, 2, 196610, 131072, 3, 262146, 131072, 4, 327682, 131072, 5, 393218, 131072, 6, 131075, 196608, 2, 196611, 196608, 3, 262147, 196608, 4, 327683, 196608, 5, 393219, 196608, 6, 131076, 262144, 2, 196612, 262144, 3, 262148, 262144, 4, 327684, 262144, 5, 393220, 262144, 6, 196613, 327680, 3, 262149, 327680, 4, 327685, 327680, 5, 393221, 327680, 6, 131078, 0, 2, 196614, 0, 3, 262150, 0, 4, 327686, 0, 5, 393222, 0, 6, 131079, 65536, 2, 196615, 65536, 3, 262151, 65536, 4, 327687, 65536, 5, 393223, 65536, 6, 131080, 131072, 2, 196616, 131072, 3, 262152, 131072, 4, 327688, 131072, 5, 393224, 131072, 6, 131081, 196608, 2, 196617, 196608, 3, 262153, 196608, 4, 327689, 196608, 5, 393225, 196608, 6, 131082, 262144, 2, 196618, 262144, 3, 262154, 262144, 4, 327690, 262144, 5, 393226, 262144, 6, 196619, 327680, 3, 262155, 327680, 4, 327691, 327680, 5, 393227, 327680, 6, 131084, 0, 2, 196620, 0, 3, 262156, 0, 4, 327692, 0, 5, 393228, 0, 6, 131085, 65536, 2, 196621, 65536, 3, 262157, 65536, 4, 327693, 65536, 5, 393229, 65536, 6, 131086, 131072, 2, 196622, 131072, 3, 262158, 131072, 4, 327694, 131072, 5, 393230, 131072, 6, 131087, 196608, 2, 196623, 196608, 3, 262159, 196608, 4, 327695, 196608, 5, 393231, 196608, 6, 131088, 262144, 2, 196624, 262144, 3, 262160, 262144, 4, 327696, 262144, 5, 393232, 262144, 6)
+
+[node name="Spaceship" parent="." instance=ExtResource("4_33cig")]
+z_index = 1
+position = Vector2(56, -208)
+script = ExtResource("5_7pobe")
