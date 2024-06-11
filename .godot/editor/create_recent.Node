@@ -1,3 +1,4 @@
+Timer
 Label
 MarginContainer
 NinePatchRect
@@ -12,4 +13,3 @@ Button
 MenuButton
 CanvasLayer
 GPUParticles2D
-CPUParticles2D

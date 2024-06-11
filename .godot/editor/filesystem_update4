@@ -1,7 +1,12 @@
 res://default_env.tres
 res://Scenes/main.tscn
+res://Scenes/Hub.tscn
 res://Scenes/Mars.tscn
 res://NPCs/Spaceship.tscn
-res://Scenes/Hub.tscn
 res://Player.tscn
 res://NPCs/TextBox.tscn
+res://NPCs/TextBox.gd
+res://NPCs/DialogManager.gd
+res://Scenes/bg.tscn
+res://NPCs/Spaceship.gd
+res://Scenes/moon.gd
