@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8qlachgiva7a"]
+[gd_scene load_steps=4 format=3 uid="uid://b8qlachgiva7a"]
 
+[ext_resource type="Script" path="res://NPCs/Spaceship.gd" id="1_km2tf"]
 [ext_resource type="Texture2D" uid="uid://borogfg2f5ni3" path="res://assets/spaceshuttle/Space_Shuttle.png" id="1_x32av"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwhf1"]
 size = Vector2(127, 116)
 
 [node name="Spaceship" type="Node2D"]
+script = ExtResource("1_km2tf")
 
 [node name="Area2D" type="Area2D" parent="."]
 
