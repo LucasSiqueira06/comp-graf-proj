@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0ivtl10etao2"]
+[gd_scene load_steps=17 format=3 uid="uid://c0ivtl10etao2"]
 
 [ext_resource type="PackedScene" uid="uid://3u7l6jyykbw8" path="res://Scenes/bg.tscn" id="1_ysagk"]
 [ext_resource type="PackedScene" uid="uid://cx5ig1n7p5qwb" path="res://Player.tscn" id="2_0ejbj"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://7s2racw8i15q" path="res://Scenes/MovingPlataform.tscn" id="5_0tiuo"]
 [ext_resource type="Texture2D" uid="uid://qkcth4wgnjr2" path="res://assets/mars-platform/Wasteland-Files.png" id="5_fr3ng"]
 [ext_resource type="PackedScene" uid="uid://baalesje6vmvw" path="res://Collectables/aluminium.tscn" id="6_c38bn"]
+[ext_resource type="PackedScene" uid="uid://didpn4rjgq4cq" path="res://Collectables/cobalt.tscn" id="7_824bb"]
+[ext_resource type="PackedScene" uid="uid://dta5c5j7oe2ex" path="res://Collectables/iron.tscn" id="8_j4n6b"]
+[ext_resource type="PackedScene" uid="uid://4bsf34wd0hsf" path="res://Collectables/magnesium.tscn" id="9_71uro"]
+[ext_resource type="PackedScene" uid="uid://brp4st4ltanad" path="res://Collectables/titanium.tscn" id="10_qnp87"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ib61q"]
 texture = ExtResource("5_fr3ng")
@@ -212,4 +216,16 @@ loop = false
 speed = 3.0
 
 [node name="Area2D" parent="." instance=ExtResource("6_c38bn")]
-position = Vector2(202, 32)
+position = Vector2(303, 531)
+
+[node name="Area2D2" parent="." instance=ExtResource("8_j4n6b")]
+position = Vector2(1904, 114)
+
+[node name="Area2D3" parent="." instance=ExtResource("9_71uro")]
+position = Vector2(846, -175)
+
+[node name="Area2D4" parent="." instance=ExtResource("10_qnp87")]
+position = Vector2(-16, 34)
+
+[node name="Cobalt" parent="." instance=ExtResource("7_824bb")]
+position = Vector2(1472, -136)

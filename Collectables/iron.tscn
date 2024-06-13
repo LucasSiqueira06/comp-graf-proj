@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dta5c5j7oe2ex"]
+
+[ext_resource type="Script" path="res://Collectables/iron.gd" id="1_jqr0h"]
+[ext_resource type="Texture2D" uid="uid://dc4eovp1keuyc" path="res://assets/minerals/Ferro.png" id="2_fvys0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4opwg"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_jqr0h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4opwg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 4
+texture = ExtResource("2_fvys0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
