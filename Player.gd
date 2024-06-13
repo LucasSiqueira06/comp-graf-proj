@@ -12,6 +12,7 @@ var moveSpeed : float = 190.0
 @export var jumpForce : float = 300
 var facingLeft : bool = false
 var score = 0
+var mars_score = 0
 
 # variável para rastrear se o Purple Ingot foi coletado
 var hasPurpleIngot = false
@@ -25,6 +26,10 @@ func collect_purple_ingot():
 func _process(delta):
 	#If para mudar a cena quando o player conseguir as 9 amostras da lua
 	if score == 9:
+		var tree = get_tree()
+		tree.change_scene_to_file(first_scene_path)
+		
+	if mars_score == 5:
 		var tree = get_tree()
 		tree.change_scene_to_file(first_scene_path)
 
@@ -78,5 +83,27 @@ func _ready():
 		currentGravity = GRAVITY_EARTH * 0.904  # A gravidade em Vênus é 0.904 vezes a gravidade na Terra
 	elif scene_name == "Main":
 		currentGravity = GRAVITY_EARTH * 0.37 
+	elif scene_name == "Mars":
+		currentGravity = GRAVITY_EARTH * 0.37 
 	else:
 		currentGravity = GRAVITY_EARTH
+
+
+func _on_area_2d_body_entered(body):
+	mars_score += 1;
+
+
+func _on_area_2d_2_body_entered(body):
+	mars_score += 1;
+
+
+func _on_area_2d_3_body_entered(body):
+	mars_score += 1;
+
+
+func _on_area_2d_4_body_entered(body):
+	mars_score += 1;
+
+
+func _on_cobalt_body_entered(body):
+	mars_score += 1;

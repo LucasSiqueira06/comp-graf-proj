@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0ivtl10etao2"]
+[gd_scene load_steps=19 format=3 uid="uid://c0ivtl10etao2"]
 
 [ext_resource type="PackedScene" uid="uid://3u7l6jyykbw8" path="res://Scenes/bg.tscn" id="1_ysagk"]
 [ext_resource type="PackedScene" uid="uid://cx5ig1n7p5qwb" path="res://Player.tscn" id="2_0ejbj"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dta5c5j7oe2ex" path="res://Collectables/iron.tscn" id="8_j4n6b"]
 [ext_resource type="PackedScene" uid="uid://4bsf34wd0hsf" path="res://Collectables/magnesium.tscn" id="9_71uro"]
 [ext_resource type="PackedScene" uid="uid://brp4st4ltanad" path="res://Collectables/titanium.tscn" id="10_qnp87"]
+[ext_resource type="Script" path="res://Scenes/DeathRect.gd" id="11_jjxqs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ib61q"]
 texture = ExtResource("5_fr3ng")
@@ -173,6 +174,9 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3jct"]
+size = Vector2(1380, 36)
+
 [node name="Mars" type="Node2D"]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_ysagk")]
@@ -229,3 +233,18 @@ position = Vector2(-16, 34)
 
 [node name="Cobalt" parent="." instance=ExtResource("7_824bb")]
 position = Vector2(1472, -136)
+
+[node name="DeathRect" type="Area2D" parent="."]
+script = ExtResource("11_jjxqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathRect"]
+position = Vector2(1213, 617)
+shape = SubResource("RectangleShape2D_t3jct")
+
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Player" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="Player" method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="Player" method="_on_area_2d_4_body_entered"]
+[connection signal="body_entered" from="Cobalt" to="Player" method="_on_cobalt_body_entered"]
+[connection signal="body_entered" from="Cobalt" to="Cobalt" method="_on_body_entered"]
+[connection signal="body_entered" from="DeathRect" to="DeathRect" method="_on_body_entered"]
