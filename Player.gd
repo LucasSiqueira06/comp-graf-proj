@@ -3,6 +3,8 @@ extends CharacterBody2D
 # Defina a gravidade na Terra
 var GRAVITY_EARTH = 800.0
 
+var first_scene_path := "res://Scenes/Hub.tscn"
+
 # Variável para armazenar a gravidade atual
 var currentGravity = GRAVITY_EARTH
 
@@ -20,7 +22,14 @@ func collect_purple_ingot():
 	hasPurpleIngot = true
 	print("purple true")
 
+func _process(delta):
+	#If para mudar a cena quando o player conseguir as 9 amostras da lua
+	if score == 9:
+		var tree = get_tree()
+		tree.change_scene_to_file(first_scene_path)
+
 func _physics_process(delta):
+	
 	if not is_on_floor():
 		velocity.y += currentGravity * delta
 		rotate(rotationSpeed * delta)
@@ -55,7 +64,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-func _on_moonrock_body_entered(body):
+func _on_moonasteriod_body_entered(body):
 	score += 1
 	print(score)
 
@@ -67,5 +76,7 @@ func _ready():
 
 	if scene_name == "Venus":
 		currentGravity = GRAVITY_EARTH * 0.904  # A gravidade em Vênus é 0.904 vezes a gravidade na Terra
+	elif scene_name == "Main":
+		currentGravity = GRAVITY_EARTH * 0.37 
 	else:
 		currentGravity = GRAVITY_EARTH

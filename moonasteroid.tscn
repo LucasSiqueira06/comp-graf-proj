@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnfmoypdpbdd7"]
+
+[ext_resource type="Script" path="res://moonasteroid.gd" id="1_khhrp"]
+[ext_resource type="Texture2D" uid="uid://be5kgqxokbe27" path="res://assets/asteroid/Asteroid_1.png" id="1_l2w5f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c57dm"]
+radius = 16.0
+
+[node name="moonasteriod" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_khhrp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, 16)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_l2w5f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-16, 16)
+shape = SubResource("CircleShape2D_c57dm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
