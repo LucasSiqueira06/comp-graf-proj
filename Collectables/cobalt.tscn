@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://didpn4rjgq4cq"]
+
+[ext_resource type="Texture2D" uid="uid://c6j3d8ps3ugj8" path="res://assets/minerals/Cobalto.png" id="1_w58ui"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_46drx"]
+
+[node name="Cobalt" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_46drx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w58ui")

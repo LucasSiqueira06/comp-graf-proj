@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caj2ys0cpbypw"
-path="res://.godot/imported/mars-assets-reduced-removebg-preview.png-8d20640065b84e44d913b5a9bcbca5e2.ctex"
+uid="uid://c6j3d8ps3ugj8"
+path="res://.godot/imported/Cobalto.png-e3a78a977c01194d57b78cdf30f59cb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mars-platform/mars-assets-reduced-removebg-preview.png"
-dest_files=["res://.godot/imported/mars-assets-reduced-removebg-preview.png-8d20640065b84e44d913b5a9bcbca5e2.ctex"]
+source_file="res://assets/minerals/Cobalto.png"
+dest_files=["res://.godot/imported/Cobalto.png-e3a78a977c01194d57b78cdf30f59cb9.ctex"]
 
 [params]
 

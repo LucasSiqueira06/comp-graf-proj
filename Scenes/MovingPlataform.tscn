@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://7s2racw8i15q"]
+
+[ext_resource type="Texture2D" uid="uid://qkcth4wgnjr2" path="res://assets/mars-platform/Wasteland-Files.png" id="1_5vkg0"]
+[ext_resource type="Script" path="res://Scenes/MovingPlataform.gd" id="1_tlrp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5norc"]
+size = Vector2(16, 80.0057)
+
+[sub_resource type="Animation" id="Animation_y17vt"]
+resource_name = "move"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_k7gwc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1jtnj"]
+_data = {
+"RESET": SubResource("Animation_k7gwc"),
+"move": SubResource("Animation_y17vt")
+}
+
+[node name="Path2D" type="Path2D"]
+script = ExtResource("1_tlrp2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-3, 517)
+rotation = 1.57273
+progress = 517.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+remote_path = NodePath("../../AnimatableBody2D")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(-3, 517)
+rotation = 1.57273
+sync_to_physics = false
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+position = Vector2(11.9574, -22.0232)
+rotation = 4.71239
+texture = ExtResource("1_5vkg0")
+hframes = 4
+vframes = 8
+frame = 25
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(4.00386, 1.99323)
+shape = SubResource("RectangleShape2D_5norc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1jtnj")
+}
