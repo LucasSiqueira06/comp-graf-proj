@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://blnpka24ly26d"]
+
+[ext_resource type="Texture2D" uid="uid://pdsfa34seqol" path="res://Venusassets/slime_green.png" id="1_iug45"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0psxd"]
+atlas = ExtResource("1_iug45")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qjcj"]
+atlas = ExtResource("1_iug45")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsd5g"]
+atlas = ExtResource("1_iug45")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqu0m"]
+atlas = ExtResource("1_iug45")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kv7ru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0psxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qjcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsd5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqu0m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="npc" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6, -6)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_kv7ru")
+autoplay = "default"
+frame = 1
+frame_progress = 0.984518
+flip_h = true

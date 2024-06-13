@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs7j5ydu34u6o"]
+
+[ext_resource type="FontFile" uid="uid://d231my7vogdl0" path="res://fonts/PixelOperator8.ttf" id="1_bguuk"]
+
+[node name="Panel" type="Panel"]
+offset_left = 8.0
+offset_right = 1920.0
+offset_bottom = 1072.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 336.0
+offset_right = 1784.0
+offset_bottom = 408.0
+theme_override_fonts/font = ExtResource("1_bguuk")
+theme_override_font_sizes/font_size = 50
+text = "     Parabéns! Você completou Vênus!"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 824.0
+offset_top = 480.0
+offset_right = 1080.0
+offset_bottom = 520.0
+theme_override_fonts/font = ExtResource("1_bguuk")
+text = "Voltar para o menu"

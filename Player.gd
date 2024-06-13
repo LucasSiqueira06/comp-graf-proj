@@ -1,11 +1,24 @@
 extends CharacterBody2D
 
-@export var currentGravity : float = 800.0
-var moveSpeed : float = 100.0
-@export var jumpForce : float = 200.0
+# Defina a gravidade na Terra
+var GRAVITY_EARTH = 800.0
+
+# Variável para armazenar a gravidade atual
+var currentGravity = GRAVITY_EARTH
+
+var moveSpeed : float = 190.0
+@export var jumpForce : float = 300
 var facingLeft : bool = false
 var score = 0
+
+# variável para rastrear se o Purple Ingot foi coletado
+var hasPurpleIngot = false
+
 @export var rotationSpeed = 2;
+
+func collect_purple_ingot():
+	hasPurpleIngot = true
+	print("purple true")
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -34,7 +47,7 @@ func _physics_process(delta):
 			$AnimatedSprite2D.play("Idle")
 	
 	if is_on_floor() and Input.is_key_pressed(KEY_SPACE):
-		velocity.y = -jumpForce * (currentGravity / 500.0)
+		velocity.y = -jumpForce
 		$AnimatedSprite2D.play("Jump")
 		$AudioStreamPlayer.play()
 	elif velocity.y < 0 and $AnimatedSprite2D.animation != "Jump":
@@ -45,3 +58,14 @@ func _physics_process(delta):
 func _on_moonrock_body_entered(body):
 	score += 1
 	print(score)
+
+# Adicione uma função para alterar a gravidade quando o jogador entra em Vênus
+func _ready():
+	var root = get_tree().get_root()
+	var current_scene = root.get_child(root.get_child_count() - 1)
+	var scene_name = current_scene.get_name()
+
+	if scene_name == "Venus":
+		currentGravity = GRAVITY_EARTH * 0.904  # A gravidade em Vênus é 0.904 vezes a gravidade na Terra
+	else:
+		currentGravity = GRAVITY_EARTH
