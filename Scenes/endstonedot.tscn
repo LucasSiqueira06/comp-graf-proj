@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://x81b5amja511"]
+
+[ext_resource type="Texture2D" uid="uid://bw1dq23bhml8k" path="res://Venusassets/stone.png" id="1_0f31v"]
+[ext_resource type="PackedScene" uid="uid://nf82bpf18crr" path="res://Scenes/endarea.tscn" id="2_7hj06"]
+[ext_resource type="Script" path="res://Scenes/endarea.gd" id="3_xms1b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvshg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, 6)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_0f31v")
+
+[node name="endarea" parent="." instance=ExtResource("2_7hj06")]
+script = ExtResource("3_xms1b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="endarea"]
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_rvshg")
